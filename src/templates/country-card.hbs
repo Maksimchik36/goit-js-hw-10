@@ -1,18 +1,16 @@
-<div class="card">
-  <div class="">
-    <img src="{{flags.svg}}" alt="{{name.official}}">
-    <h2 class="card-title">Страна: {{name.official}}</h2>
-  </div>
-
-    <p class="card-text">столица: {{capital}}</p>
-    <p class="card-text">население: {{population}}</p>
-
-    <ul class="list-group">Языки</ul>
-    {{#each languages}}
-      <li class="list-group-item">{{languages}}</li>
+    {{#each this}}
+      <div>
+        <img src='{{flags.svg}}' alt="{{name.official}} flag" width="60px" height="30px">
+        <p class="country">{{name.official}}</p>
+      </div>
+      <p class="">Capital: {{capital}}</p>
+      <p class="">Population: {{population}}</p>
+      <p class="">Languages:
+      {{#each languages}}
+        <span>{{this}}</span>
+      {{/each}}
+      </p>
     {{/each}}
-    </ul>
-</div>
 
 {{!-- <div class="card">
   <div class="card-img-top">
