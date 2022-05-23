@@ -1,13 +1,14 @@
     {{#each this}}
       <div class="country__image">
-        <img src='{{flags.svg}}' alt="{{name.official}} flag" width="60px" height="30px">
-        <p class="country__name">{{name.official}}</p>
+        <img src='{{flags.svg}}' alt="{{name.official}} flag" width="60px" style="margin-right: 10px;">
+        <p class="country__name" style="font-size: 30px; font-weight:bold ">{{name.official}}</p>
       </div>
-      <p class="country__information">Capital: {{capital}}</p>
-      <p class="country__information">Population: {{population}}</p>
-      <p class="country__information">Languages:
-      {{#each languages}}
-        <span>{{this}}</span>
+      <p><b>Capital:</b> {{capital}}</p>
+      <p><b>Population:</b> {{population}}</p>
+      <p><b>Languages:</b>
+      {{#each languages}}   
+        <span>{{this}}{{#unless @last}},{{/unless}}
+</span>
       {{/each}}
       </p>
     {{/each}}
