@@ -18,3 +18,19 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+/*   добавил для оформления*/
+
+.country__item{
+display: flex;
+align-items: center;
+}
+
+.country__image{
+  display: flex;
+  align-items: center;
+}
+
+
+
+

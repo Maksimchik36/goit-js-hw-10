@@ -1,31 +1,13 @@
     {{#each this}}
-      <div>
+      <div class="country__image">
         <img src='{{flags.svg}}' alt="{{name.official}} flag" width="60px" height="30px">
-        <p class="country">{{name.official}}</p>
+        <p class="country__name">{{name.official}}</p>
       </div>
-      <p class="">Capital: {{capital}}</p>
-      <p class="">Population: {{population}}</p>
-      <p class="">Languages:
+      <p class="country__information">Capital: {{capital}}</p>
+      <p class="country__information">Population: {{population}}</p>
+      <p class="country__information">Languages:
       {{#each languages}}
         <span>{{this}}</span>
       {{/each}}
       </p>
     {{/each}}
-
-{{!-- <div class="card">
-  <div class="card-img-top">
-    <img src="{{sprites.front_default}}" alt="{{name}}">
-  </div>
-  <div class="card-body">
-    <h2 class="card-title">Имя: {{name}}</h2>
-    <p class="card-text">Вес: {{weight}}</p>
-    <p class="card-text">Рост: {{height}}</p>
-
-    <p class="card-text"><b>Умения</b></p>
-    <ul class="list-group"></ul>
-    {{#each abilities}}
-      <li class="list-group-item">{{ability.name}}</li>
-    {{/each}}
-    </ul>
-  </div>
-</div> --}}
